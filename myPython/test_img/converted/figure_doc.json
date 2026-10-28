@@ -1,0 +1,62 @@
+{
+  "pages": [
+    {
+      "page_num": 0,
+      "page_size": {
+        "w": 1876,
+        "h": 2500
+      },
+      "merge_content_from_pre_page": false,
+      "blocks": [
+        {
+          "idx": 0,
+          "type": "Text",
+          "bbox": [
+            141.0502166748047,
+            267.4944763183594,
+            545.4135131835938,
+            300.9740905761719
+          ],
+          "content": "Below is a figure for image extraction test.",
+          "format": "text"
+        },
+        {
+          "idx": 1,
+          "type": "Picture",
+          "bbox": [
+            139.17294311523438,
+            412.0315246582031,
+            987.3175659179688,
+            1048.7606201171875
+          ],
+          "content": "![](https://free-oxr.somark.cn/api/v1/files/d3dd815b4b6b427c8732c94fcc398841/0181e9d94097f6f3a5c1128428c9d087d7466bc6cac13461878cbd5dd0bdb22e.png)",
+          "format": "markdown"
+        },
+        {
+          "idx": 2,
+          "type": "Text",
+          "bbox": [
+            139.66114807128906,
+            1163.6314697265625,
+            540.2545776367188,
+            1197.5020751953125
+          ],
+          "content": "Chart area ends. This is trailing body text",
+          "format": "text"
+        },
+        {
+          "idx": 3,
+          "type": "Text",
+          "bbox": [
+            140.679443359375,
+            1287.6644287109375,
+            566.7564086914062,
+            1321.3175048828125
+          ],
+          "content": "Formula test E = mc^2 and a^2 + b^2 = c^2",
+          "format": "text"
+        }
+      ]
+    }
+  ]
+}

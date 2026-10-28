@@ -142,6 +142,9 @@ def main() -> int:
     )
     parser.add_argument("--recursive", "-r", help="递归扫描子目录", action="store_true")
     parser.add_argument("--force", help="忽略已有结果强制重转", action="store_true")
+    parser.add_argument(
+        "--tex", help="转换完成后自动生成 LaTeX 工程（图片本地化+.tex）", action="store_true"
+    )
     args = parser.parse_args()
 
     formats = [f.strip().lower() for f in args.formats.split(",") if f.strip()]
@@ -221,6 +224,23 @@ def main() -> int:
             print(f"  - {pdf.name}: {reason}")
         print("提示: 失败多为免费 API 限流/超时，直接重新运行本脚本即可续转（已成功的会自动跳过）。")
         return 1
+
+    # --tex: 对成功结果生成 LaTeX 工程
+    if args.tex and succeeded:
+        print("=" * 62)
+        print("[LaTeX] 开始生成 TeX 工程...")
+        try:
+            import subprocess
+            script_dir = Path(__file__).parent / "md_to_tex.py"
+            base = out_dir if out_dir is not None else target
+            proc = subprocess.run(
+                [sys.executable, str(script_dir), str(base), "--out", str(base / "tex_projects")],
+                cwd=str(script_dir.parent),
+            )
+            if proc.returncode != 0:
+                print("[LaTeX] 生成过程中有失败项，详见上方日志")
+        except Exception as err:
+            print(f"[LaTeX] 启动失败: {err}")
     return 0
 
 

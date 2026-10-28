@@ -1,0 +1,50 @@
+{
+  "pages": [
+    {
+      "page_num": 0,
+      "page_size": {
+        "w": 1667,
+        "h": 2084
+      },
+      "merge_content_from_pre_page": false,
+      "blocks": [
+        {
+          "idx": 0,
+          "type": "Text",
+          "bbox": [
+            160.91690063476562,
+            164.34852600097656,
+            369.6285705566406,
+            195.50482177734375
+          ],
+          "content": "OXR Batch Test Doc 2",
+          "format": "text"
+        },
+        {
+          "idx": 1,
+          "type": "Text",
+          "bbox": [
+            161.9386749267578,
+            310.0094299316406,
+            670.495849609375,
+            345.0023498535156
+          ],
+          "content": "Page content for document 2: paragraph text testing.",
+          "format": "text"
+        },
+        {
+          "idx": 2,
+          "type": "Text",
+          "bbox": [
+            162.3079833984375,
+            435.1654968261719,
+            384.54522705078125,
+            467.0360107421875
+          ],
+          "content": "Item A / Item B / Item C",
+          "format": "text"
+        }
+      ]
+    }
+  ]
+}
